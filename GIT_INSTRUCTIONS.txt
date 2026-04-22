@@ -1,0 +1,249 @@
+====================================================================
+   GIT WORKFLOW INSTRUCTIONS - TrainConsist Project
+   Repository: https://github.com/nirnjana/TrainConsist.git
+   Author : Niranjana
+====================================================================
+
+WHAT HAS ALREADY BEEN DONE FOR YOU (completed by Antigravity)
+--------------------------------------------------------------
+[x] Cloned repo from https://github.com/nirnjana/TrainConsist.git
+[x] Created branch: dev
+[x] Pushed empty dev branch to GitHub
+[x] Created App/src/main/ and App/src/test/ directories
+[x] Created ALL Java files for UC1 to UC20 (main + test)
+[x] Created feature branch: feature/UC8-TrainConsistMgmt
+[x] Committed all files with message:
+    "Niranjana Added feature/UC8-TrainConsistMgmt - UC1 to UC20 Java classes and JUnit 5 tests"
+[x] Pushed feature/UC8-TrainConsistMgmt to GitHub
+
+
+====================================================================
+STEP YOU MUST DO NOW IN GITHUB (Do this first!)
+====================================================================
+
+1. Open this URL in your browser:
+   https://github.com/nirnjana/TrainConsist/pull/new/feature/UC8-TrainConsistMgmt
+
+2. You will see "Compare & pull request" page.
+
+3. IMPORTANT: Change the base branch from "main" to "dev"
+   (There is a dropdown at the top that says "base: main" — click it and select "dev")
+
+4. Click "Create pull request"
+
+5. Click "Merge pull request"
+
+6. Click "Confirm merge"
+
+7. Now UC8 code is merged into the dev branch. ✅
+
+8. DO NOT merge dev into main.
+
+
+====================================================================
+AFTER MERGING UC8 — PULL LATEST CODE TO YOUR LOCAL MACHINE
+====================================================================
+
+Open terminal in: C:\niranjana\train
+
+Then run these commands:
+
+    git checkout dev
+    git pull origin dev
+
+
+====================================================================
+HOW TO DO EACH FUTURE USE CASE (UC9 to UC20)
+Follow these exact steps for each use case
+====================================================================
+
+Replace [UCX] with the actual use case number (e.g., UC9, UC10, etc.)
+Replace [BranchName] with the actual branch name (e.g., feature/UC9-SortBogies)
+
+----------------------------------------------------------------------
+STEP 1: Make sure you are on dev and have the latest code
+----------------------------------------------------------------------
+    git checkout dev
+    git pull origin dev
+
+----------------------------------------------------------------------
+STEP 2: Create a new feature branch from dev
+----------------------------------------------------------------------
+    git checkout -b feature/UC9-SortBogiesByType
+
+    (Use appropriate names for each UC:)
+    UC9  → git checkout -b feature/UC9-SortBogiesByType
+    UC10 → git checkout -b feature/UC10-FilterBogiesByType
+    UC11 → git checkout -b feature/UC11-MaxCapacityBogie
+    UC12 → git checkout -b feature/UC12-CountBogiesByType
+    UC13 → git checkout -b feature/UC13-ValidateConsist
+    UC14 → git checkout -b feature/UC14-AverageCapacity
+    UC15 → git checkout -b feature/UC15-ReverseConsist
+    UC16 → git checkout -b feature/UC16-ClearConsist
+    UC17 → git checkout -b feature/UC17-ContainsBogieType
+    UC18 → git checkout -b feature/UC18-ReplaceBogie
+    UC19 → git checkout -b feature/UC19-CopyConsist
+    UC20 → git checkout -b feature/UC20-ConsistReport
+
+----------------------------------------------------------------------
+STEP 3: Open the Java file in IntelliJ (already created for you)
+----------------------------------------------------------------------
+    Files are already in:
+    - App/src/main/UseCaseXX....java
+    - App/src/test/UseCaseXXTest.java
+
+    Add the JUnit 5 library if not already done:
+    File → Project Settings → Libraries → + → From Maven
+    Search: org.junit.jupiter:junit-jupiter:5.10.0
+    Click OK → Select App → OK → Apply → OK
+
+----------------------------------------------------------------------
+STEP 4: Run the test file in IntelliJ
+----------------------------------------------------------------------
+    Right-click on the UseCaseXXTest.java file → Run
+
+----------------------------------------------------------------------
+STEP 5: Add your changes to git
+----------------------------------------------------------------------
+    git add .
+
+----------------------------------------------------------------------
+STEP 6: Commit your changes
+----------------------------------------------------------------------
+    git commit -m "Niranjana Added feature/UC9-SortBogiesByType"
+
+    (Replace UC9-SortBogiesByType with your actual branch name)
+
+----------------------------------------------------------------------
+STEP 7: Push to GitHub
+----------------------------------------------------------------------
+    git push origin feature/UC9-SortBogiesByType
+
+    (Replace with your actual branch name)
+
+----------------------------------------------------------------------
+STEP 8: Go to GitHub and Create a Pull Request
+----------------------------------------------------------------------
+    1. Open https://github.com/nirnjana/TrainConsist
+    2. You will see a yellow banner: "Compare & pull request" — Click it
+    3. IMPORTANT: Change base branch from "main" to "dev"
+    4. Click "Create pull request"
+    5. Click "Merge pull request"
+    6. Click "Confirm merge"
+
+----------------------------------------------------------------------
+STEP 9: Switch back to dev and pull latest code
+----------------------------------------------------------------------
+    git checkout dev
+    git pull origin dev
+
+----------------------------------------------------------------------
+STEP 10: Repeat from STEP 2 for the next use case
+----------------------------------------------------------------------
+
+
+====================================================================
+COMPLETE BRANCH SEQUENCE (for reference)
+====================================================================
+
+main (DO NOT push to this directly)
+  └─ dev
+       ├─ feature/UC8-TrainConsistMgmt      ← DONE ✅
+       ├─ feature/UC9-SortBogiesByType
+       ├─ feature/UC10-FilterBogiesByType
+       ├─ feature/UC11-MaxCapacityBogie
+       ├─ feature/UC12-CountBogiesByType
+       ├─ feature/UC13-ValidateConsist
+       ├─ feature/UC14-AverageCapacity
+       ├─ feature/UC15-ReverseConsist
+       ├─ feature/UC16-ClearConsist
+       ├─ feature/UC17-ContainsBogieType
+       ├─ feature/UC18-ReplaceBogie
+       ├─ feature/UC19-CopyConsist
+       └─ feature/UC20-ConsistReport
+
+
+====================================================================
+INTELLIJ SETUP REMINDER (Do only once)
+====================================================================
+
+To add JUnit 5:
+1. File → Project Settings → Libraries
+2. Click the + icon
+3. Click "From Maven"
+4. Type: org.junit.jupiter:junit-jupiter:5.10.0
+5. Click OK
+6. Select "App" module → Click OK
+7. Click Apply → OK
+
+To run tests:
+- Open the test file (e.g., UseCase8TrainConsistMgmtTest.java)
+- Right-click anywhere in the file
+- Click "Run 'UseCase8TrainConsistMgmtTest'"
+
+
+====================================================================
+FILE LOCATIONS SUMMARY
+====================================================================
+
+C:\niranjana\train\
+  App\
+    src\
+      main\
+        UseCase1InitTrainConsist.java
+        UseCase2AddBogies.java
+        UseCase3RemoveBogie.java
+        UseCase4DisplayBogieDetails.java
+        UseCase5SearchBogie.java
+        UseCase6UpdateBogie.java
+        UseCase7TotalCapacity.java
+        UseCase8TrainConsistMgmt.java        ← Main UC8 file
+        UseCase9SortBogiesByType.java
+        UseCase10FilterBogiesByType.java
+        UseCase11MaxCapacityBogie.java
+        UseCase12CountBogiesByType.java
+        UseCase13ValidateConsist.java
+        UseCase14AverageCapacity.java
+        UseCase15ReverseConsist.java
+        UseCase16ClearConsist.java
+        UseCase17ContainsBogieType.java
+        UseCase18ReplaceBogie.java
+        UseCase19CopyConsist.java
+        UseCase20ConsistReport.java
+      test\
+        UseCase1InitTrainConsistTest.java
+        UseCase2AddBogiesTest.java
+        UseCase3RemoveBogieTest.java
+        UseCase4DisplayBogieDetailsTest.java
+        UseCase5SearchBogieTest.java
+        UseCase6UpdateBogieTest.java
+        UseCase7TotalCapacityTest.java
+        UseCase8TrainConsistMgmtTest.java    ← Main UC8 test (15 test cases)
+        UseCase9SortBogiesByTypeTest.java
+        UseCase10FilterBogiesByTypeTest.java
+        UseCase11MaxCapacityBogieTest.java
+        UseCase12CountBogiesByTypeTest.java
+        UseCase13ValidateConsistTest.java
+        UseCase14AverageCapacityTest.java
+        UseCase15ReverseConsistTest.java
+        UseCase16ClearConsistTest.java
+        UseCase17ContainsBogieTypeTest.java
+        UseCase18ReplaceBogieTest.java
+        UseCase19CopyConsistTest.java
+        UseCase20ConsistReportTest.java
+
+
+====================================================================
+IMPORTANT RULES (DO NOT FORGET)
+====================================================================
+
+✅ Always create feature branches FROM dev (not from main)
+✅ Always merge PRs TO dev (not to main)
+✅ Always pull latest dev before creating a new feature branch
+✅ Commit message format: "Niranjana Added [branch-name]"
+❌ DO NOT merge dev into main (unless final submission)
+❌ DO NOT push directly to main or dev (always use PRs)
+
+====================================================================
+END OF INSTRUCTIONS
+====================================================================
